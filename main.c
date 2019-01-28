@@ -1,7 +1,7 @@
 #include <STC15F2K60S2.h>
 #include <stdio.h>
 #include <intrins.h>
-#include "AD7705/AD7705.h"
+#include "AD7705.h"
 
 void Delay20ms();
 

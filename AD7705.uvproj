@@ -389,7 +389,7 @@
             <File>
               <FileName>AD7705.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\AD7705\AD7705.c</FilePath>
+              <FilePath>.\AD7705.c</FilePath>
             </File>
           </Files>
         </Group>
