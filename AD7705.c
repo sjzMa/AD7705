@@ -28,7 +28,7 @@ void AD7705_Write(unsigned char _data)
 		{
 			DIN = 1; 
 		}			
-        else
+        	else
 		{
 			DIN = 0;
 		}
