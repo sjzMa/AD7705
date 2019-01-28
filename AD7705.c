@@ -100,7 +100,7 @@ void AD7705_Init(void)
 	AD7705_Write(REG_SETTING | WRITE_FLAG | ENABLE | CH_1);
 	AD7705_Write(SETTING_INIT);
 			
-    CS = 1; 
+	CS = 1; 
 	
 	while(DRDY);
 	LED = 0;
