@@ -5,6 +5,8 @@
 #define CLOLK_INIT CLK_4_9152M | FS_60HZ 
 #define SETTING_INIT ZERO_CALIBRATE | GAIN_1 | SINGAL_POLAR | OPEN_BUFFER | FSYNC
 
+sbit LED  = P1^0;
+
 sbit SCLK = P1^1;
 sbit DIN  = P1^2;
 sbit DOUT = P1^3;
@@ -12,7 +14,6 @@ sbit DRDY = P1^4;
 sbit CS   = P1^5;
 sbit RST  = P1^6;
 
-sbit LED  = P1^0;
 
 void AD7705_Write(unsigned char _data)
 {
@@ -35,8 +36,7 @@ void AD7705_Write(unsigned char _data)
 		_nop_();
 		SCLK = 1;
 		_data <<= 1;
-	}
-	
+	}	
 	SCLK = 1;
 	DIN  = 1;
 	CS   = 1;
@@ -93,8 +93,7 @@ void AD7705_Init(void)
 	AD7705_Write(CLOLK_INIT);
 	AD7705_Write(REG_SETTING | WRITE_FLAG | ENABLE | CH_0);
 	AD7705_Write(SETTING_INIT);	
-	
-	
+		
 	AD7705_Write(REG_CLOCK | WRITE_FLAG | ENABLE | CH_1);
 	AD7705_Write(CLOLK_INIT);
 	AD7705_Write(REG_SETTING | WRITE_FLAG | ENABLE | CH_1);
